@@ -1,0 +1,23 @@
+<div class="container" ng-controller="ProductController">
+    <h2 class="row">List of Products:</h2>
+    <table class="row table">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Category</th>            
+        </tr>
+        <tr ng-repeat="product in vm.products">
+            <td>
+                <a href="#!/products/{{product.id}}">
+                    <img src="img/glyphicons-31-pencil.png">
+                </a>
+            </td> 
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price | currency}}</td>
+            <td>{{product.category.name}}</td>            
+        </tr>
+    </table>
+</div>

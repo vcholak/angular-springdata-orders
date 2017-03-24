@@ -1,0 +1,19 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+.gradle
+build
+!gradle/wrapper/gradle-wrapper.jar
+
+out
+reports
+
+node_modules
+src/main/resources/static/app/vendor
+
+*.log
+
+TODOs.adoc

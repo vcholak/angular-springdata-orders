@@ -1,0 +1,74 @@
+<div class="container" ng-controller="EnterOrderController" ng-hide="vm.data.error">
+    <h2 class="row">Enter Order</h2>
+    <form name="frm" novalidate class="css-form">   
+    <div class="row">       
+       <div class="form-group">
+            <span class="error" ng-show="frm.custId.$error.required">
+                <strong>Please select a customer:</strong>
+            </span>
+            <span ng-hide="frm.custId.$error.required">
+                <strong>Customer:</strong>
+            </span>                
+            <label>
+                <select class="form-control" ng-model="customerId" name="custId" required>
+                    <option ng-repeat="customer in vm.customers" value="{{customer.id}}">
+                        {{customer.lastName}}, {{customer.firstName}}
+                    </option>
+                </select>
+            </label> 
+        </div>                 
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xs-6">                       
+            <div class="panel panel-default row">
+                <div class="col-xs-6">
+                    <a ng-click="vm.selectCategory(null)" class="btn btn-block btn-default btn-lg" ng-class="vm.getCategoryClass(null)">All Categories</a>      
+                    <a ng-repeat="category in vm.products | unique:'category' | orderBy"   
+                       ng-click="vm.selectCategory(category)" class="btn btn-block btn-default btn-lg"
+                       ng-class="vm.getCategoryClass(category)">
+                        {{category}}
+                    </a>
+                </div>
+                <div class="col-xs-6">
+                    <div class="well" ng-repeat="product in vm.products | filter:vm.categoryFilter | range:vm.selectedPage:vm.pageSize">                    
+                        <h3>
+                            <strong>{{product.name}}</strong>
+                            <span class="pull-right label label-primary">
+                                {{product.price | currency}}
+                            </span>
+                        </h3>
+                        <button ng-click="vm.addProductToCart(product)" class="btn btn-success pull-right">Add ></button>
+                        <!--span class="lead">{{product.description}}</span-->
+                    </div>
+                    <div class="pull-right btn-group">
+                        <a ng-repeat="page in vm.products | filter:vm.categoryFilter | pager:vm.pageSize"                        
+                           ng-click="vm.selectPage($index + 1)" class="btn btn-default" ng-class="vm.getPageClass($index + 1)">
+                            {{$index + 1}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+           <strong>Current Order</strong>           
+           <div class="row" ng-show="vm.cartItems().length === 0">You have no items in your current order</div>
+           <div class="row" ng-hide="vm.cartItems().length === 0">
+               <div ng-repeat="item in vm.cartItems()" class="row">
+                   <button class="btn btn-sm btn-warning" ng-click="vm.removeItem(item.id)"><img src="img/glyphicons-198-remove-circle.png"></button>
+                   <span>{{item.name}}</span>
+                   <span>{{item.price | currency}}</span>
+                   <span>Quantity: {{item.amount}}</span>
+                   <span>Subtotal: {{item.price * item.amount | currency}}</span>
+               </div>
+               <div class="row">
+                   <cart-summary />
+               </div>
+               <div class="row text-center">
+                   <input type="submit" ng-click="vm.placeOrder(customerId)" value="Place Order" ng-disabled="frm.$invalid" class="btn btn-primary"/>
+               </div>
+           </div>
+        </div>
+    </div>
+    </form>     
+</div>

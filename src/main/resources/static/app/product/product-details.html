@@ -1,0 +1,15 @@
+<div class="container" ng-controller="ProductDetailsController">
+    <h2 class="row">Product Details</h2>
+    <div class="row">
+        <dl>
+        <dt>Name:</dt>
+        <span>{{vm.product.name}}</span>
+        <dt>Description:</dt>
+        <span>{{vm.product.description}}</span>
+        <dt>Price:</dt>
+        <span>{{vm.product.price | currency}}</span>
+        <dt>Category:</dt>
+        <span>{{vm.product.category.name}}</span>        
+        </dl>
+    </div>     
+</div>

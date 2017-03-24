@@ -1,0 +1,25 @@
+<div class="container" ng-controller="CustomerController">
+    <h2 class="row">List of Customers:</h2>
+    <table class="row table">
+        <tr>
+            <th></th>
+            <th>Customer Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
+        </tr>
+        <tr ng-repeat="customer in vm.customers">
+            <td>
+                <a href="#!/customers/{{customer.id}}">
+                    <img src="img/glyphicons-31-pencil.png">
+                </a>
+            </td> 
+            <td>{{customer.lastName}}, {{customer.firstName}}</td>
+            <td>{{customer.address}}</td>
+            <td>{{customer.city}}</td>
+            <td>{{customer.state.abbreviation}}</td>
+            <td>{{customer.zipCode}}</td>
+        </tr>
+    </table>
+</div>

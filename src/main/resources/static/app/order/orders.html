@@ -1,0 +1,24 @@
+<div class="container" ng-controller="OrderController">
+    <h2 class="row">List of Orders:</h2>
+    <a href="#!/orders/enter">
+        <img src="img/glyphicons-191-plus-sign.png">
+    </a>    
+    <table class="row table">
+        <tr>            
+            <th>Order #</th>
+            <th>Order Date</th>
+            <th>Customer Name</th>            
+            <th>Sales Rep</th>
+            <th>Order Items</th>
+            <th>Order Total</th>
+        </tr>
+        <tr ng-repeat="order in vm.orders">            
+            <td><a href="#!/orders/{{order.id}}">{{order.id}}</a></td>
+            <td>{{order.date | date:'medium'}}</td>
+            <td>{{order.customer.lastName}}, {{order.customer.firstName}}</td>
+            <td>{{order.salesRep.username}}</td>
+            <td>{{order.itemsCount}}</td>            
+            <td>{{order.total | currency}}</td>
+        </tr>
+    </table>
+</div>

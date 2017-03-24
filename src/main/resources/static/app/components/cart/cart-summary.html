@@ -1,0 +1,11 @@
+<style>    
+    .navbar-text { margin-right: 10px; }
+</style>
+
+<div class="text-center">
+    <div>   
+        <strong>Your cart:</strong>
+        {{$ctrl.itemCount()}} item(s),
+        {{$ctrl.total() | currency}}
+    </div>    
+</div>

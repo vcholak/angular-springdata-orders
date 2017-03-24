@@ -1,0 +1,23 @@
+{
+  "spec_dir": "spec",
+  "spec_files": [
+    "**/*[sS]pec.js"
+  ],
+  "helpers": [    
+            "../src/main/resources/static/app/vendor/angular/angular.js",
+            "../src/main/resources/static/app/vendor/angular-route/angular-route.js",
+            "../src/main/resources/static/app/vendor/angular-resource/angular-resource.js",            
+            "../src/main/resources/static/app/vendor/angular-mocks/angular-mocks.js",
+            "../src/main/resources/static/app/app.module.js",
+            "../src/main/resources/static/app/*.js",
+            "../src/main/resources/static/app/components/**/*.module.js",
+            "../src/main/resources/static/app/components/**/*.js",
+            "../src/main/resources/static/app/home/*.js",
+            "../src/main/resources/static/app/customer/*.js",
+            "../src/main/resources/static/app/product/*.js",
+            "../src/main/resources/static/app/state/*.js",
+            "../src/main/resources/static/app/order/*.js"
+  ],    
+  "stopSpecOnExpectationFailure": false,
+  "random": false
+}

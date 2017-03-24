@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Orders App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="app/vendor/bootstrap/css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="app/vendor/modernizr/modernizr.js"></script>
+</head>
+<body>
+<header>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#!/home" data-target="#home" aria-controls="home" role="tab"
+                                                  data-toggle="tab">Home</a></li>
+        <li role="presentation"><a href="#!/customers" data-target="#customers" aria-controls="customers" role="tab"
+                                   data-toggle="tab">Customers</a></li>
+        <li role="presentation"><a href="#!/products" data-target="#products" aria-controls="products" role="tab"
+                                   data-toggle="tab">Products</a></li>
+        <li role="presentation"><a href="#!/orders" data-target="#orders" aria-controls="orders" role="tab"
+                                   data-toggle="tab">Orders</a></li>
+    </ul>
+</header>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="container" ng-view></div>
+
+<footer>
+    <div>Orders app: v<span app-version></span></div>
+</footer>
+
+<script src="app/plugins.js"></script>
+
+<script src="app/vendor/jquery/jquery.js"></script>
+<script src="app/vendor/bootstrap/js/bootstrap.js"></script>
+
+<script src="app/vendor/angular/angular.js"></script>
+<script src="app/vendor/angular-route/angular-route.js"></script>
+<script src="app/vendor/angular-resource/angular-resource.js"></script>
+
+<script src="app/vendor/angular-spring-data-rest/angular-spring-data-rest.js"></script>
+
+<script src="app/app.module.js"></script>
+<script src="app/app.config.js"></script>
+<script src="app/app.route.js"></script>
+
+<script src="app/components/version/version.module.js"></script>
+<script src="app/components/version/version.constant.js"></script>
+<script src="app/components/version/interpolate.filter.js"></script>
+<script src="app/components/version/version.directive.js"></script>
+
+<script src="app/components/cart/cart.module.js"></script>
+<script src="app/components/cart/cart.component.js"></script>
+
+<script src="app/components/filters/filters.module.js"></script>
+<script src="app/components/filters/pager.filter.js"></script>
+<script src="app/components/filters/range.filter.js"></script>
+<script src="app/components/filters/unique.filter.js"></script>
+
+<script src="app/home/home.module.js"></script>
+<script src="app/home/home.route.js"></script>
+<script src="app/home/home.controller.js"></script>
+
+<script src="app/customer/customer.module.js"></script>
+<script src="app/customer/customer.route.js"></script>
+<script src="app/customer/customer.controller.js"></script>
+<script src="app/customer/customer.service.js"></script>
+<script src="app/customer/customer-details.controller.js"></script>
+
+<script src="app/product/product.module.js"></script>
+<script src="app/product/product.route.js"></script>
+<script src="app/product/product.controller.js"></script>
+<script src="app/product/product-details.controller.js"></script>
+<script src="app/product/product.service.js"></script>
+
+<script src="app/state/state.module.js"></script>
+<script src="app/state/state.service.js"></script>
+
+<script src="app/order/order.module.js"></script>
+<script src="app/order/order.constant.js"></script>
+<script src="app/order/order.route.js"></script>
+<script src="app/order/order.controller.js"></script>
+<script src="app/order/order-details.controller.js"></script>
+<script src="app/order/enter-order.controller.js"></script>
+<script src="app/order/order.service.js"></script>
+<script src="app/order/order-item.service.js"></script>
+</body>
+</html>

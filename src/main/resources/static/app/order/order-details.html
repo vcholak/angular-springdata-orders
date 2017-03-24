@@ -1,0 +1,15 @@
+<div class="container" ng-controller="OrderDetailsController">
+    <h2 class="row">Order Details</h2>
+    <div class="row">
+        <dl>
+        <dt>ID:</dt>
+        <span>{{vm.order.id}}</span>
+        <dt>Date:</dt>
+        <span>{{vm.order.date | date:'medium'}}</span>
+        <dt>Total:</dt>
+        <span>{{vm.order.total | currency}}</span>
+        <dt>Items:</dt>
+        <span>{{vm.order.itemsCount}}</span>        
+        </dl>
+    </div>     
+</div>
