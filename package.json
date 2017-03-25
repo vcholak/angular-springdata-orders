@@ -3,7 +3,11 @@
   "private": true,
   "version": "1.0.0",
   "description": "Orders app implemented using AngularJS front-end and Spring Data back-end",
-  "repository": "https://github.com/vcholak/angular-springdata-orders",
+  "homepage": "https://github.com/vcholak/angular-springdata-orders",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vcholak/angular-springdata-orders.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
