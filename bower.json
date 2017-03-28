@@ -6,20 +6,19 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-      "angular": "1.6.x",
-      "angular-route": "1.6.x",
-      "angular-resource": "1.6.x",
-      "angular-loader": "1.6.x",
-               
-      "modernizr": "^2.8.3",      
-      "bootstrap": "3.3.x",
-      "jquery": "2.2.x",                  
-      "angular-spring-data-rest": "latest"
+    "angular": "1.6.x",
+    "angular-route": "1.6.x",
+    "angular-resource": "1.6.x",
+    "angular-loader": "1.6.x",
+    "modernizr": "^2.8.3",
+    "bootstrap": "3.3.x",
+    "jquery": "2.2.x",
+    "angular-spring-data-rest": "latest"
   },
-    "install": { 
-        "path": "src/main/resources/static/app/vendor"        
-    },
-  "ignore": [    
+  "install": {
+    "path": "src/main/resources/static/app/vendor"
+  },
+  "ignore": [
     "test",
     "tests"
   ]
