@@ -18,7 +18,7 @@ endif::[]
  Node.js to be installed.
 
 = Building and Starting Application
- From a command prompt, issue the following two commands:
+ From a command prompt, execute the following two commands:
  
  npm install
  gradlew bootRun
