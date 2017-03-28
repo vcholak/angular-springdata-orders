@@ -22,8 +22,7 @@ plugins {
     id 'org.springframework.boot' version '1.5.2.RELEASE'
     id 'java'
     id 'idea'
-    id 'eclipse'
-    id 'com.craigburke.client-dependencies' version '1.4.0'
+    id 'eclipse'    
 }
 
 // In this section you declare where to find the dependencies of your project
@@ -70,28 +69,4 @@ dependencies {
     //testCompile 'junit:junit'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'com.jayway.jsonpath:json-path'
-}
-
-clientDependencies {
-    installDir = 'src/main/resources/static/app/vendor' // Location that dependencies are installed to
-    cacheDir = 'build/client-cache/' // Location of the local project cache
-    useGlobalCache = true // Whether the global caches for bower and npm are searched when resolving dependencies
-    checkDownloads = true // Whether downloads are checked and verified
-    threadPoolSize = 10 // Size of thread pool used when downloading and installing dependencies
-
-    // any changes to bower dependencies here must also be manually copied to bower.json
-    bower {
-        "angular" "1.6.x"
-        "angular-route" "1.6.x"
-        "angular-resource" "1.6.x"
-        "angular-loader" "1.6.x"
-        "angular-mocks" "1.6.x"
-        "modernizr" "^2.8.3"
-        "bootstrap" "3.3.x"
-        "jquery" "2.2.x"
-        "angular-bootstrap" "latest"
-        "angular-animate" "1.6.x"
-        "angular-touch" "1.6.x"
-        "angular-spring-data-rest" "latest"
-    }
 }
