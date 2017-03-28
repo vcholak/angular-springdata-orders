@@ -9,3 +9,16 @@ ifdef::env-github[]
 endif::[]
 
 = Orders app implemented using AngularJS front-end and Spring Data back-end
+
+
+= Prerequisites
+ Java JDK to be installed, version 8 or higher. Java code uses Java 8 features.
+ Gradle uses whatever JDK it finds in your PATH environment variable. Alternatively, you can set the JAVA_HOME environment variable to point to the installation directory of the desired JDK.
+
+ Node.js to be installed.
+
+= Building and Starting Application
+ From a command prompt, issue the following two commands:
+ 
+ npm install
+ gradlew bootRun
