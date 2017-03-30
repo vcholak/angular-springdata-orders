@@ -1,21 +1,33 @@
 <div class="container" ng-controller="CustomerDetailsController">
     <h2 class="row">Customer Details</h2>
     <div class="row">
-        <dl>
-        <dt>First Name:</dt>
-        <span>{{vm.customer.firstName}}</span>
-        <dt>Last Name:</dt>
-        <span>{{vm.customer.lastName}}</span>
-        <dt>Street Address:</dt>
-        <span>{{vm.customer.address}}</span>
-        <dt>Line 2:</dt>
-        <span>{{vm.customer.address2}}</span>
-        <dt>City:</dt>
-        <span>{{vm.customer.city}}</span>
-        <dt>State:</dt>
-        <span>{{vm.customer.state.name}}</span>
-        <dt>Zip Code:</dt>
-        <span>{{vm.customer.zipCode}}</span>
-        </dl>
+        <div>
+            <label>First Name:</label>
+            <span>{{vm.customer.firstName}}</span>
+        </div>
+        <div>
+            <label>Last Name:</label>
+            <span>{{vm.customer.lastName}}</span>
+        </div>
+        <div>
+            <label>Street Address:</label>
+            <span>{{vm.customer.address}}</span>
+        </div>
+        <div>
+            <label>Line 2:</label>
+            <span>{{vm.customer.address2}}</span>
+        </div>
+        <div>
+            <label>City:</label>
+            <span>{{vm.customer.city}}</span>
+        </div>
+        <div>
+            <label>State:</label>
+            <span>{{vm.customer.state.name}}</span>
+        </div>
+        <div>
+            <label>Zip Code:</label>
+            <span>{{vm.customer.zipCode}}</span>
+        </div>
     </div>     
 </div>

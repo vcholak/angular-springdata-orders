@@ -1,15 +1,21 @@
 <div class="container" ng-controller="OrderDetailsController">
     <h2 class="row">Order Details</h2>
     <div class="row">
-        <dl>
-        <dt>ID:</dt>
-        <span>{{vm.order.id}}</span>
-        <dt>Date:</dt>
-        <span>{{vm.order.date | date:'medium'}}</span>
-        <dt>Total:</dt>
-        <span>{{vm.order.total | currency}}</span>
-        <dt>Items:</dt>
-        <span>{{vm.order.itemsCount}}</span>        
-        </dl>
+        <div>
+            <label>ID:</label>
+            <span>{{vm.order.id}}</span>
+        </div>
+        <div>
+            <label>Date:</label>
+            <span>{{vm.order.date | date:'medium'}}</span>
+        </div>
+        <div>
+            <label>Total:</label>
+            <span>{{vm.order.total | currency}}</span>
+        </div>
+        <div>
+            <label>Items:</label>
+            <span>{{vm.order.itemsCount}}</span>        
+        </div>
     </div>     
 </div>
