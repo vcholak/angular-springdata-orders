@@ -9,10 +9,8 @@
 
     /* @ngInject */
     function CustomerController(CustomerService, SpringDataRestAdapter) {
-        var vm = this;
-        vm.property = 'Controller';
-        
-        var resource = CustomerService.query();
+        var vm = this,
+            resource = CustomerService.query();
        
         SpringDataRestAdapter.process(resource.$promise, 'state', true).then(function (processedResponse) {
             vm.customers = processedResponse._embeddedItems;
