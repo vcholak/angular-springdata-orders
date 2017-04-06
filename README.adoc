@@ -12,10 +12,10 @@ endif::[]
 
 
 = Prerequisites
- Java JDK to be installed, version 8 or higher. Java code uses Java 8 features.
- Gradle uses whatever JDK it finds in your PATH environment variable. Alternatively, you can set the JAVA_HOME environment variable to point to the installation directory of the desired JDK.
+ 1.Java SDK to be installed, version 8 or higher. Java code uses Java 8 features.
+ Gradle uses whatever Java SDK it finds in your PATH environment variable. Alternatively, you can set the JAVA_HOME environment variable to point to the installation directory of the desired Java SDK.
 
- Node.js to be installed.
+ 2.Node.js and Bower package to be installed.
 
 = Building and Starting Application
  From a command prompt, execute the following two commands:
