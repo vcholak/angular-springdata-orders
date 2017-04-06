@@ -1,1 +1,7 @@
-<p>This is the partial for home.</p>
+<div class="container" ng-controller="HomeController">
+    <h2 class="row">Available API:</h2>
+
+    <div class="row">
+        <pre>{{vm.api | json}}</pre>
+    </div>
+</div>
