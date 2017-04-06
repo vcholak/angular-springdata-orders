@@ -1,0 +1,5 @@
+{
+  "name": "Orders app on Heroku",
+  "description": "Orders app implemented using AngularJS and Spring Boot",
+  "image": "heroku/gradle"  
+}
