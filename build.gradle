@@ -22,7 +22,8 @@ plugins {
     id 'org.springframework.boot' version '1.5.2.RELEASE'
     id 'java'
     id 'idea'
-    id 'eclipse'    
+    id 'eclipse'
+    id 'distribution'    
 }
 
 // In this section you declare where to find the dependencies of your project
@@ -72,5 +73,5 @@ dependencies {
 }
 
 task stage {
-  //dependsOn installDist
+  dependsOn installDist
 }
